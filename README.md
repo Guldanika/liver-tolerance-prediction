@@ -116,8 +116,11 @@ The core end-to-end machine learning workflow — including data preprocessing,
 statistical feature selection, model training, cross-validation, external
 validation, and model interpretability — is implemented in a reproducible
 Jupyter notebook:
-
 https://colab.research.google.com/drive/14Zfzp0yMHkfREzVdZw2uo7hX0GXXxrQJ?usp=sharing 
+
+🔗 Full ML pipeline (EDA, preprocessing, training, evaluation, SHAP):
+👉 [Predicting_Operational_Tolerance_in_Liver_Transplantation.ipynb](https://colab.research.google.com/drive/14Zfzp0yMHkfREzVdZw2uo7hX0GXXxrQJ?usp=sharing)
+
 
 ## DEPLOYMENT
 ```
