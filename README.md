@@ -106,6 +106,12 @@ Confusion matrix
 ## Pipeline Overview
 <img width="389" height="665" alt="Снимок экрана 2025-12-29 в 02 46 36" src="https://github.com/user-attachments/assets/eded2fac-c319-4f7e-89c5-bbb01f7a8161" />
 
+## HOW TO REPRODUCE 
+```
+pip install -r requirements.txt
+run Notebook.ipynb
+```
+
 ## DEPLOYMENT
 ```
 docker build -t tolerance-predictor .
