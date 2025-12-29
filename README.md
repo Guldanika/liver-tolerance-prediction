@@ -109,7 +109,7 @@ Confusion matrix
 ## HOW TO REPRODUCE 
 ```
 pip install -r requirements.txt
-run Notebook.ipynb
+run notebook.ipynb
 ```
 
 ## DEPLOYMENT
