@@ -82,4 +82,48 @@ Genes decreasing tolerance probability:
 IL6, CXCL10, STAT1 — markers of inflammation and rejection risk.
 These genes correspond to immune tolerance mechanisms described in Li et al. (2012, Am J Transplant) and reflect Treg/NK‑cell–driven regulation observed in tolerant liver recipients.
 
+## Biological alignment
 
+The signature strongly matches published tolerance mechanisms:
+
+- NK-cell effector expansion (Bohne et al., 2014, J Clin Invest)
+- Treg enrichment (Li et al., 2012, Am J Transplant)
+- γδ T-cell involvement (Martínez-Llordella et al., 2008, J Clin Invest)
+
+## Key Visualizations
+Expression distribution per sample
+Boxplot per sample
+Probe variability
+Probe std distribution
+Clustered correlation (top 50 selected probes)
+Correlation clustermap
+Top differentially expressed probes
+Top 5 genes boxplots
+Final confusion matrix
+Confusion matrix
+
+
+## Pipeline Overview
+<img width="389" height="665" alt="Снимок экрана 2025-12-29 в 02 46 36" src="https://github.com/user-attachments/assets/eded2fac-c319-4f7e-89c5-bbb01f7a8161" />
+
+## DEPLOYMENT
+```
+docker build -t tolerance-predictor .
+docker run -p 3000:3000 tolerance-predictor
+```
+
+## Live API (after deployment)
+
+## Limitations
+
+- Single-center pediatric cohort (n=70)
+- Affymetrix platform-specific probes
+- No clinical covariates included
+- Research use only — prospective validation required
+
+## References
+
+- Li et al. (2012). Peripheral blood transcriptional markers of immunosuppression weaning. Am J Transplant.
+- Bohne et al. (2014). NK cells correlate with operational tolerance. J Clin Invest.
+- Martínez-Llordella et al. (2008). Immunosuppression withdrawal signature. J Clin Invest.
+- GEO: GSE28842 (https://ftp.ncbi.nlm.nih.gov/geo/series/GSE28nnn/GSE28842/matrix/) 
