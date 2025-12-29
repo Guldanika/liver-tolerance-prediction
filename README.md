@@ -138,4 +138,9 @@ docker run -p 3000:3000 tolerance-predictor
 - Li et al. (2012). Peripheral blood transcriptional markers of immunosuppression weaning. Am J Transplant.
 - Bohne et al. (2014). NK cells correlate with operational tolerance. J Clin Invest.
 - Martínez-Llordella et al. (2008). Immunosuppression withdrawal signature. J Clin Invest.
-- GEO: GSE28842 (https://ftp.ncbi.nlm.nih.gov/geo/series/GSE28nnn/GSE28842/matrix/) 
+- GEO: GSE28842 (https://ftp.ncbi.nlm.nih.gov/geo/series/GSE28nnn/GSE28842/matrix/)
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
