@@ -1,2 +1,53 @@
-# liver-tolerance-prediction
-This project addresses the problem of predicting operational tolerance in stable liver transplant recipients using peripheral blood gene‑expression profiles, with the goal of supporting safer and more individualized immunosuppression withdrawal strategies based on molecular biomarkers derived from the public dataset GSE28842 
+# Liver Transplant Operational Tolerance Predictor
+
+**Predicting operational tolerance in pediatric liver transplant recipients using peripheral blood gene expression (GSE28842)**
+
+**Test ROC-AUC: 0.917 • 100% Sensitivity for Tolerant Class • NK/Treg Signature Validated via SHAP**
+
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![LightGBM](https://img.shields.io/badge/LightGBM-4.4.0-brightgreen.svg)](https://lightgbm.readthedocs.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.0-orange.svg)](https://scikit-learn.org/)
+[![BentoML](https://img.shields.io/badge/BentoML-1.2.18-blue.svg)](https://bentoml.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## Quick Start
+
+```bash
+# Clone and setup
+git clone https://github.com/your-username/liver-tolerance-prediction
+cd liver-tolerance-prediction
+python -m venv venv && source venv/bin/activate
+
+# Install
+pip install -r requirements.txt
+
+# Train (auto-downloads GSE28842)
+python train_model.py
+
+# Serve API
+bentoml serve service.py:ToleranceService --reload
+```
+
+→ Prediction endpoint: http://localhost:3000/predict
+```
+curl -X POST http://localhost:3000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"expression_values": [5.2, 6.1, ..., 7.0]}'  # 500 values
+```
+
+## Example response
+```
+{
+  "probability_of_tolerance": 0.92,
+  "predicted_class": 1
+}
+```
+
+## Problem & Clinical Context
+Long-term immunosuppression after liver transplantation carries high morbidity: infections, malignancy, nephrotoxicity, and reduced quality of life. A subset of pediatric recipients achieves operational tolerance — stable graft function without immunosuppression — yet no reliable non-invasive biomarker exists for prospective identification.
+This project trains a binary classifier on peripheral blood gene expression (GSE28842, n=70) to predict tolerance and support safer withdrawal decisions.
+Research-grade tool only — intended to complement, not replace, clinical judgment and biopsy.
+<img width="759" height="640" alt="Снимок экрана 2025-12-29 в 00 34 45" src="https://github.com/user-attachments/assets/6f07097a-8e42-4370-ba4a-f1a6db965305" />
+
