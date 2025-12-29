@@ -9,6 +9,8 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.0-orange.svg)](https://scikit-learn.org/)
 [![BentoML](https://img.shields.io/badge/BentoML-1.2.18-blue.svg)](https://bentoml.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 ---
 
