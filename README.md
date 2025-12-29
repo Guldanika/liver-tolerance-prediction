@@ -51,3 +51,35 @@ This project trains a binary classifier on peripheral blood gene expression (GSE
 Research-grade tool only — intended to complement, not replace, clinical judgment and biopsy.
 <img width="759" height="640" alt="Снимок экрана 2025-12-29 в 00 34 45" src="https://github.com/user-attachments/assets/6f07097a-8e42-4370-ba4a-f1a6db965305" />
 
+## Model Interpretation (SHAP)
+
+SHAP Summary Plot
+Top features driving tolerance prediction
+
+↑ Tolerance: NKG7, GNLY, KLRD1, GZMA, FOXP3, CCL20, TRGC2
+↓ Tolerance: CXCL10, STAT1, IL6
+
+Biological alignment
+The signature strongly matches published tolerance mechanisms:
+
+NK-cell effector expansion (Bohne et al., 2014, J Clin Invest)
+Treg enrichment (Li et al., 2012, Am J Transplant)
+γδ T-cell involvement (Martínez-Llordella et al., 2008, J Clin Invest)
+
+
+## 🧬 Biological Interpretation of Top Genes
+The SHAP analysis of models trained exclusively on GSE28842 highlights several immune‑regulatory genes associated with operational tolerance after liver transplantation.
+
+<img width="735" height="916" alt="Без названия" src="https://github.com/user-attachments/assets/2a60b882-7d35-405d-b0ed-3176efc54efc" />
+
+
+Genes increasing tolerance probability:
+
+FOXP3, IL2RB, CCL5 — key regulators of T‑cell tolerance and immune suppression.
+KLRD1, GNLY, NKG7 — NK‑cell effector molecules enriched in tolerant recipients.
+Genes decreasing tolerance probability:
+
+IL6, CXCL10, STAT1 — markers of inflammation and rejection risk.
+These genes correspond to immune tolerance mechanisms described in Li et al. (2012, Am J Transplant) and reflect Treg/NK‑cell–driven regulation observed in tolerant liver recipients.
+
+
